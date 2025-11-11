@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="hitungrekursif"/>
+        <attribute name="authors" value="hp"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-11-11 08:46:17 PM"/>
+        <attribute name="created" value="aHA7TkFOSU5BOzIwMjUtMTEtMTE7MDg6MjM6NTAgUE07MTkyOA=="/>
+        <attribute name="edited" value="aHA7TkFOSU5BOzIwMjUtMTEtMTE7MDg6NDY6MTcgUE07MzsyMDQ2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="angka" type="Integer" array="False" size=""/>
+            <input variable="angka"/>
+            <assign variable="angka" expression="hitungrekursif(angka)"/>
+            <output expression="angka" newline="True"/>
+        </body>
+    </function>
+    <function name="hitungrekursif" type="Integer" variable="result">
+        <parameters>
+            <parameter name="angka" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="result" type="Integer" array="False" size=""/>
+            <if expression="angka == 1">
+                <then>
+                    <assign variable="result" expression="1"/>
+                </then>
+                <else>
+                    <assign variable="result" expression="hitungrekursif(angka-1)+angka"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

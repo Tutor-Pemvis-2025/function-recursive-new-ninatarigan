@@ -1,34 +1,37 @@
 <?xml version="1.0"?>
 <flowgorithm fileversion="4.2">
     <attributes>
-        <attribute name="name" value="hitungrekursif"/>
-        <attribute name="authors" value="hp"/>
+        <attribute name="name" value="tutor"/>
+        <attribute name="authors" value="USER"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2025-11-11 09:05:18 PM"/>
-        <attribute name="created" value="aHA7TkFOSU5BOzIwMjUtMTEtMTE7MDg6MjM6NTAgUE07MTkyOA=="/>
-        <attribute name="edited" value="aHA7TkFOSU5BOzIwMjUtMTEtMTE7MDk6MDU6MTggUE07NTsyMDQ1"/>
+        <attribute name="saved" value="2025-11-11 08:49:15 PM"/>
+        <attribute name="created" value="VVNFUjtMQVBUT1AtVUZVQUEzSUo7MjAyNC0xMS0wNTswOToxMzo0MiBQTTsyNjc0"/>
+        <attribute name="edited" value="VVNFUjtMQVBUT1AtVUZVQUEzSUo7MjAyNC0xMS0wNTswOToxODoyNCBQTTsxOzI3ODc="/>
+        <attribute name="edited" value="TG92aXM7TE9WSVNLQTsyMDI1LTExLTExOzA4LjI1LjE3IFBNOzE7MjQyNg=="/>
+        <attribute name="edited" value="TE9RO0xBUFRPUC1VOFZUMlM5NTsyMDI1LTExLTExOzA4OjQ5OjE1IFBNOzI7MjY5Mg=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <declare name="angka, result" type="Integer" array="False" size=""/>
-            <input variable="angka"/>
-            <assign variable="result" expression="hitungrekursif(angka)"/>
-            <output expression="result" newline="True"/>
+            <declare name="n, hasil" type="Integer" array="False" size=""/>
+            <input variable="n"/>
+            <assign variable="hasil" expression="pertambahan(n)"/>
+            <output expression="&quot;Bilangan yang dimasukkan : &quot; &amp; n" newline="True"/>
+            <output expression="&quot;Hasil perhitungan rekursif : &quot; &amp; hasil" newline="True"/>
         </body>
     </function>
-    <function name="hitungrekursif" type="Integer" variable="result">
+    <function name="pertambahan" type="Integer" variable="hasil">
         <parameters>
-            <parameter name="angka" type="Integer" array="False"/>
+            <parameter name="n" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="result" type="Integer" array="False" size=""/>
-            <if expression="angka == 1">
+            <declare name="hasil" type="Integer" array="False" size=""/>
+            <if expression="n==1">
                 <then>
-                    <assign variable="result" expression="1"/>
+                    <assign variable="hasil" expression="1"/>
                 </then>
                 <else>
-                    <assign variable="result" expression="hitungrekursif(angka-1)+angka"/>
+                    <assign variable="hasil" expression="pertambahan(n-1)+n"/>
                 </else>
             </if>
         </body>

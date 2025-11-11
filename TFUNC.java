@@ -5,22 +5,23 @@ public class TFUNC {
     private static Scanner input = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int angka, result;
+        int n, hasil;
 
-        angka = Integer.parseInt(input.nextLine());
-        result = hitungrekursif(angka);
-        System.out.println(result);
+        n = Integer.parseInt(input.nextLine());
+        hasil = pertambahan(n);
+        System.out.println("Bilangan yang dimasukkan : " + n);
+        System.out.println("Hasil perhitungan rekursif : " + hasil);
     }
     
-    public static int hitungrekursif(int angka) {
-        int result;
+    public static int pertambahan(int n) {
+        int hasil;
 
-        if (angka == 1) {
-            result = 1;
+        if (n == 1) {
+            hasil = 1;
         } else {
-            result = hitungrekursif(angka - 1) + angka;
+            hasil = pertambahan(n - 1) + n;
         }
         
-        return result;
+        return hasil;
     }
 }
